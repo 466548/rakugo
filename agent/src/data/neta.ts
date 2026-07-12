@@ -38,7 +38,7 @@ export const NETA_SEED: Neta[] = [
   { id: 'keikoya', title: '稽古屋', kana: 'けいこや', summary: '習い事の稽古屋を舞台にした、上方仕込みの賑やかな一席。', tags: ['滑稽噺'], works: ['akane'], rakugokaIds: ['kichiya', 'nanko', 'futaba'] },
   { id: 'kohome', title: '子ほめ', kana: 'こほめ', summary: 'ただ酒目当てに人をほめて回る、前座噺の定番。', tags: ['滑稽噺'], works: ['akane', 'showa'], rakugokaIds: ['futaba', 'kochiraku'] },
   { id: 'sanbou', title: '三方一両損', kana: 'さんぼういちりょうぞん', summary: '拾った財布をめぐる江戸っ子の意地とお裁き。', tags: ['人情噺', '滑稽噺'], works: ['akane'], rakugokaIds: ['iccho', 'ichinosuke'] },
-  { id: 'tenshiki', title: '転失気', kana: 'てんしき', summary: '知ったかぶりが空回りする、寺を舞台の軽妙な滑稽噺。', tags: ['滑稽噺'], works: ['akane'], rakugokaIds: ['kikuhiko', 'touka'] },
+  { id: 'tenshiki', title: '転失気', kana: 'てんしき', summary: '知ったかぶりが空回りする、寺を舞台の軽妙な滑稽噺。', tags: ['滑稽噺'], works: ['akane'], rakugokaIds: ['kikuhiko', 'touka', 'yujaku'] },
   { id: 'aona', title: '青菜', kana: 'あおな', summary: '夏の昼下がり、植木屋が見栄を真似て失敗する涼やかな一席。', tags: ['滑稽噺'], rakugokaIds: ['ichinosuke', 'iccho'] },
   { id: 'tokisoba', title: '時そば', kana: 'ときそば', summary: '勘定をごまかす手口を真似て大失敗。所作が見どころ。', tags: ['滑稽噺', 'テンポ重視'], works: ['showa'], rakugokaIds: ['shota', 'taihei'] },
   { id: 'katabou', title: '片棒', kana: 'かたぼう', summary: 'ケチな大店の主が三人の息子を試す、リズムの良い滑稽噺。', tags: ['滑稽噺'], rakugokaIds: ['iccho', 'taihei'] },
@@ -54,12 +54,12 @@ export const NETA_SEED: Neta[] = [
   { id: 'omitate', title: 'お見立て', kana: 'おみたて', summary: '気の進まない客を花魁が居留守でかわす、軽妙な廓噺。', tags: ['廓噺'], rakugokaIds: ['kikunojo', 'bungiku'] },
   { id: 'tonasuya', title: '唐茄子屋政談', kana: 'とうなすやせいだん', summary: '勘当された若旦那が唐茄子（かぼちゃ）売りで再起する人情噺。', tags: ['人情噺'], rakugokaIds: ['kumosuke', 'shozo'] },
   // --- 昭和元禄落語心中 ゆかりの大ネタ ---
-  { id: 'shinigami', title: '死神', kana: 'しにがみ', summary: '死神と取引する男を描く、落語心中を象徴する一席。', tags: ['怪談噺', '古典'], works: ['showa'], rakugokaIds: ['kumosuke', 'sanza', 'kikunojo'] },
+  { id: 'shinigami', title: '死神', kana: 'しにがみ', summary: '死神と取引する男を描く、落語心中を象徴する一席。', tags: ['怪談噺', '古典'], works: ['showa'], rakugokaIds: ['kumosuke', 'sanza', 'kikunojo', 'yujaku'] },
   { id: 'inokori', title: '居残り佐平次', kana: 'いのこりさへいじ', summary: '勘定を踏み倒し居残る佐平次の人たらし。粋でしたたかな廓噺。', tags: ['廓噺', '滑稽噺'], works: ['showa'], rakugokaIds: ['kikunojo', 'kumosuke'] },
   { id: 'shinagawa', title: '品川心中', kana: 'しながわしんじゅう', summary: '心中に巻き込まれる男の顛末を描く、艶と可笑しみの廓噺。', tags: ['廓噺'], works: ['showa'], rakugokaIds: ['kikunojo', 'kumosuke', 'bungiku'] },
   { id: 'rakuda', title: 'らくだ', kana: 'らくだ', summary: '死んだ「らくだ」を担いで強談判。立場が逆転していく大ネタ。', tags: ['滑稽噺'], works: ['showa'], rakugokaIds: ['kumosuke', 'ichinosuke', 'yujaku'] },
   // --- ちりとてちん（上方）ゆかりの演目 ---
-  { id: 'chiritotechin', title: 'ちりとてちん', kana: 'ちりとてちん', summary: '腐った豆腐を「珍味」と言って食わせる、上方の名物滑稽噺。', tags: ['滑稽噺'], works: ['chiri'], rakugokaIds: ['kichiya', 'nanko', 'futaba'] },
+  { id: 'chiritotechin', title: 'ちりとてちん', kana: 'ちりとてちん', summary: '腐った豆腐を「珍味」と言って食わせる、上方の名物滑稽噺。', tags: ['滑稽噺'], works: ['chiri'], rakugokaIds: ['kichiya', 'nanko', 'futaba', 'yujaku'] },
   { id: 'atagoyama', title: '愛宕山', kana: 'あたごやま', summary: '京の愛宕山で繰り広げる、派手で華やかな上方の大ネタ。', tags: ['滑稽噺'], works: ['chiri'], rakugokaIds: ['beidanji', 'nanko', 'bunchin'] },
   { id: 'sutokuin', title: '崇徳院', kana: 'すとくいん', summary: '恋煩いの若旦那のため町中を探し回る、人情味ある一席。', tags: ['人情噺', '滑稽噺'], works: ['chiri'], rakugokaIds: ['kichiya', 'futaba', 'nanko'] },
   { id: 'tachigire', title: 'たちぎれ線香', kana: 'たちぎれせんこう', summary: '芸者を恋う若旦那、線香が燃え尽きるまでの切ない人情噺。', tags: ['人情噺'], works: ['showa', 'chiri'], rakugokaIds: ['beidanji', 'kichiya'] },
@@ -68,7 +68,7 @@ export const NETA_SEED: Neta[] = [
   { id: 'bushoudoko', title: '無精床', kana: 'ぶしょうどこ', summary: '無精者ばかりの髪結床で起きる、のんきで可笑しい滑稽噺。', tags: ['滑稽噺'], rakugokaIds: ['shoyu'] },
   { id: 'gamanoabura', title: 'がまの油', kana: 'がまのあぶら', summary: '蝦蟇の油売りの口上が、酔うほどにぐだぐだになる名物の滑稽噺。', tags: ['滑稽噺'], rakugokaIds: ['shoyu'] },
   { id: 'uonedoi', title: '魚根問', kana: 'うおねどい', summary: '魚の名の由来を隠居に問う問答が転がる、根問ものの滑稽噺。', tags: ['滑稽噺'], rakugokaIds: ['shoyu'] },
-  { id: 'unaginotaiko', title: '鰻の幇間', kana: 'うなぎのたいこ', summary: 'たかろうとした幇間が、逆に鰻屋で勘定を押し付けられる滑稽噺。', tags: ['滑稽噺'], rakugokaIds: ['shoyu'] },
+  { id: 'unaginotaiko', title: '鰻の幇間', kana: 'うなぎのたいこ', summary: 'たかろうとした幇間が、逆に鰻屋で勘定を押し付けられる滑稽噺。', tags: ['滑稽噺'], rakugokaIds: ['shoyu', 'yujaku'] },
   { id: 'horinouchi', title: '堀の内', kana: 'ほりのうち', summary: 'そそっかしい男の粗忽ぶりが次々炸裂する、寄席の爆笑噺。', tags: ['滑稽噺'], rakugokaIds: ['shoyu'] },
   { id: 'fudoubou', title: '不動坊', kana: 'ふどうぼう', summary: '後家をめぐる恋敵を、幽霊仕掛けで脅かそうとする滑稽噺。', tags: ['滑稽噺'], rakugokaIds: ['shoyu'] },
   { id: 'yuyaban', title: '湯屋番', kana: 'ゆやばん', summary: '銭湯の番台に座った若旦那の妄想が暴走する、陽気な滑稽噺。', tags: ['滑稽噺'], rakugokaIds: ['shoyu'] },
@@ -88,6 +88,7 @@ export const NETA_SEED: Neta[] = [
   { id: 'kawazuchaban', title: '蛙茶番', kana: 'かわずちゃばん', summary: '素人芝居の楽屋を舞台に、見栄と勘違いが弾ける滑稽噺。', tags: ['滑稽噺'], rakugokaIds: ['yujaku'] },
   { id: 'sanadakozou', title: '真田小僧', kana: 'さなだこぞう', summary: 'こまっしゃくれた子どもが親から小遣いを巻き上げる滑稽噺。', tags: ['滑稽噺'], rakugokaIds: ['yujaku'] },
   { id: 'hitomeagari', title: '一目あがり', kana: 'ひとめあがり', summary: '掛け軸の褒め方を教わった男が見当違いを連発する滑稽噺。', tags: ['滑稽噺'], rakugokaIds: ['yujaku'] },
+  { id: 'kawayakaji', title: '厠火事', kana: 'かわやかじ', summary: '厠（便所）から火が出る騒動をめぐる賑やかな滑稽噺。', tags: ['滑稽噺'], rakugokaIds: ['yujaku'] },
 ];
 
 function featuredRank(n: Neta): number {
