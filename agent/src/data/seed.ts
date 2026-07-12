@@ -63,6 +63,7 @@ const MAP_ENTRIES: MapEntry[] = [
   { id: 'shosho', name: '春風亭昇々', group: 'geijutsu', venue: 'teiseki', x: 80, y: 21, nyumon: false, kai: '裸ンナー!!（自作の新作）', m: '昇太門下の新作派。エネルギッシュで振り切った高座' },
   { id: 'shota', name: '春風亭昇太', group: 'geijutsu', venue: 'teiseki', x: 83, y: 33, nyumon: true, kai: '時そば（主任）', m: '新作の旗手にして笑点司会' },
   { id: 'kochiraku', name: '柳亭小痴楽', group: 'geijutsu', venue: 'teiseki', x: 28, y: 38, nyumon: true, akane: '滑稽噺の数々', kai: '大工調べ', m: '歯切れよく威勢のいい江戸前。華のある若手真打で寄席でも人気、入門にも◎' },
+  { id: 'shoyu', name: '三遊亭笑遊', group: 'geijutsu', venue: 'teiseki', x: 26, y: 22, nyumon: true, m: '豪快でパワフルな爆笑派のベテラン。大きな声と勢いで寄席を沸かせる滑稽噺' },
   // 円楽一門会
   { id: 'kenko', name: '三遊亭兼好', group: 'enraku', venue: 'teiseki', x: 28, y: 45, nyumon: false, m: '爆笑系で評価急上昇。末廣亭などにも顔を出す' },
   { id: 'mankitsu', name: '三遊亭萬橘', group: 'enraku', venue: 'teiseki', x: 62, y: 26, nyumon: false, m: '唯一無二の変な可笑しさ。芸協客員にも' },
