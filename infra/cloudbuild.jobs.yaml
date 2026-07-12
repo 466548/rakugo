@@ -1,0 +1,11 @@
+# 番組インジェスト Job のイメージを Cloud Build でビルドして Artifact Registry へ。
+#   gcloud builds submit --config infra/cloudbuild.jobs.yaml \
+#     --substitutions=_IMAGE=asia-northeast1-docker.pkg.dev/PROJECT/rakugo/jobs:latest .
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-f', 'infra/Dockerfile.jobs', '-t', '${_IMAGE}', '.']
+images:
+  - '${_IMAGE}'
+options:
+  machineType: 'E2_HIGHCPU_8'
+timeout: '1200s'

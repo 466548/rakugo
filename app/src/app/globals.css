@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/*
+ * デザインシステム = doc/DESIGN.md（Apple風）。
+ * 単一アクセント=Action Blue、白/パーチメント↔近黒タイルの交互、ピル型CTA、
+ * SF Pro 代替に Inter + 日本語は Noto Sans JP。装飾シャドウは原則なし。
+ */
+@theme {
+  --color-primary: #0066cc;
+  --color-primary-focus: #0071e3;
+  --color-sky: #2997ff;
+
+  --color-ink: #1d1d1f;
+  --color-body-muted: #cccccc;
+  --color-ink-muted: #333333;
+  --color-ink-faint: #7a7a7a;
+
+  --color-divider: #f0f0f0;
+  --color-hairline: #e0e0e0;
+
+  --color-canvas: #ffffff;
+  --color-parchment: #f5f5f7;
+  --color-pearl: #fafafc;
+
+  --color-tile: #272729;
+  --color-tile-2: #2a2a2c;
+  --color-tile-3: #252527;
+
+  --radius-xs: 5px;
+  --radius-sm: 8px;
+  --radius-md: 11px;
+  --radius-lg: 18px;
+  --radius-pill: 9999px;
+
+  --font-sans: var(--font-inter), var(--font-noto), ui-sans-serif, system-ui,
+    -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+}
+
+/* 見出しの「Apple tight」トラッキング */
+.tracking-tight-apple {
+  letter-spacing: -0.022em;
+}
+
+/* システム唯一のドロップシャドウ（プロダクト/カードを浮かせたい時だけ控えめに） */
+.shadow-product {
+  box-shadow: rgba(0, 0, 0, 0.12) 0 6px 30px 0;
+}
+
+/* 全ボタン共通の押下マイクロインタラクション */
+.press {
+  transition: transform 0.12s ease, opacity 0.12s ease, background-color 0.12s ease;
+}
+.press:active {
+  transform: scale(0.96);
+}
+
+/* 横スクロールのスクロールバーを隠す（セクションナビ用） */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

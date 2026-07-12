@@ -1,0 +1,18 @@
+# Cloud Build へアップロードしない（doc・秘密・巨大物を除外）
+.git
+doc/
+.env
+.env*.local
+*.local
+
+node_modules
+**/node_modules
+.next
+**/.next
+dist
+**/dist
+.localdata
+**/.localdata
+.turbo
+.vercel
+*.log

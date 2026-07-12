@@ -1,0 +1,47 @@
+{
+  "description": "芸風分類・初心者判定・番組構造化の妥当性テストセット（CI で実行）。判定は決定的なルールベース経路を対象にする。",
+  "matching": [
+    {
+      "name": "人情噺の好み → 人情噺系を推定・提案",
+      "input": { "text": "人情噺でじっくり泣きたい" },
+      "expectInferred": ["人情噺"],
+      "expectTopStyleAny": ["人情噺", "正統派"]
+    },
+    {
+      "name": "テンポ重視 → 滑稽/テンポ系",
+      "input": { "text": "短くてテンポよく笑いたい" },
+      "expectInferred": ["テンポ重視"],
+      "expectTopStyleAny": ["滑稽噺", "テンポ重視"]
+    },
+    {
+      "name": "新作 → 新作系",
+      "input": { "text": "新作落語が気になる" },
+      "expectInferred": ["新作"],
+      "expectTopStyleAny": ["新作"]
+    },
+    {
+      "name": "古典 → 古典系",
+      "input": { "text": "王道の古典をじっくり" },
+      "expectInferred": ["古典"],
+      "expectTopStyleAny": ["古典", "正統派"]
+    },
+    {
+      "name": "師匠名基準 → 本人は候補から除外",
+      "input": { "rakugokaName": "柳家喬太郎" },
+      "expectExcludeId": "kyotaro"
+    }
+  ],
+  "parsing": [
+    {
+      "name": "夜席の香盤を構造化（トリ判定）",
+      "rawText": "2026年7月3日 夜席\n春風亭一朝\n太神楽 翁家社中\n柳家三三\n春風亭一之輔",
+      "expectPart": "night",
+      "expectTori": "春風亭一之輔",
+      "minLineup": 3
+    }
+  ],
+  "beginner": [
+    { "name": "入門おすすめ師匠は初心者度が高い (一之輔)", "rakugokaId": "ichinosuke", "minBeginnerScore": 80 },
+    { "name": "渋い本格派は初心者度が控えめ (雲助)", "rakugokaId": "kumosuke", "maxBeginnerScore": 75 }
+  ]
+}

@@ -1,0 +1,14 @@
+# 番組インジェスト Job（Cloud Run Jobs）用イメージ
+# Cloud Scheduler から毎日トリガーされる自律パイプラインを実行する。
+#   docker build -f infra/Dockerfile.jobs -t rakugo-jobs .
+# syntax=docker/dockerfile:1
+
+FROM node:24-slim AS base
+RUN corepack enable
+WORKDIR /repo
+
+COPY . .
+RUN pnpm install --frozen-lockfile
+
+# Cloud Run Job のエントリ（取得→構造化→照合→推薦→保存）
+CMD ["pnpm", "--filter", "@rakugo/jobs", "ingest"]

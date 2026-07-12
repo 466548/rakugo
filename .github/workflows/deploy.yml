@@ -1,0 +1,32 @@
+name: Deploy to Cloud Run
+
+# 手動実行（workflow_dispatch）のみ。GCP 認証情報（Secrets）が必要なため自動では走らない。
+# 必要な Secrets / Variables:
+#   secrets.GCP_WORKLOAD_IDP   … Workload Identity Provider
+#   secrets.GCP_SERVICE_ACCOUNT … デプロイ用サービスアカウント
+#   vars.GCP_PROJECT_ID / vars.GCP_REGION (例: asia-northeast1)
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # Workload Identity Federation
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDP }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      - uses: google-github-actions/setup-gcloud@v2
+
+      - name: Deploy（infra/deploy.sh に集約）
+        env:
+          GCP_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
+          GCP_REGION: ${{ vars.GCP_REGION }}
+        run: bash infra/deploy.sh

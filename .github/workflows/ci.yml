@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck (agent / jobs / evals)
+        run: pnpm --filter @rakugo/agent --filter @rakugo/jobs --filter @rakugo/evals typecheck
+
+      - name: Eval (芸風分類・初心者判定・番組構造化の品質ゲート)
+        run: pnpm --filter @rakugo/evals eval
+
+      - name: Build app (Next.js / 型チェック込み)
+        run: pnpm --filter @rakugo/app build

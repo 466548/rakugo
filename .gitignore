@@ -1,0 +1,33 @@
+# GitHub にあげたくないドキュメント
+/doc/
+
+# dependencies
+node_modules/
+.pnpm-store/
+
+# next.js
+.next/
+out/
+build/
+dist/
+
+# local data store (Firestore の代替 / ローカル先行)
+.localdata/
+**/.localdata/
+
+# env / secrets
+.env
+.env*.local
+*.local
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# misc
+.DS_Store
+*.pem
+coverage/
+.turbo/
+.vercel/

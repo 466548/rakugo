@@ -1,0 +1,22 @@
+{
+  "name": "rakugo-zenza",
+  "version": "0.1.0",
+  "private": true,
+  "description": "寄席コンシェルジュ「前座さん」 — 落語初心者のための寄席レコメンド AI エージェント",
+  "scripts": {
+    "dev": "pnpm --filter @rakugo/app dev",
+    "build": "pnpm --filter @rakugo/agent build && pnpm --filter @rakugo/app build",
+    "start": "pnpm --filter @rakugo/app start",
+    "lint": "pnpm --filter @rakugo/app lint",
+    "ingest": "pnpm --filter @rakugo/jobs ingest",
+    "agent:build": "pnpm --filter @rakugo/agent build",
+    "typecheck": "pnpm -r exec tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=24.13.0"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp", "@google/genai", "protobufjs"]
+  }
+}
