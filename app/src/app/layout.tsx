@@ -44,6 +44,17 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <p>
               対象定席（MVP）：新宿末廣亭・鈴本演芸場。番組表の取得は各定席の公式サイトを尊重し、適切な間隔・キャッシュで行います。
             </p>
+            <p>
+              スペシャルサンクス：
+              <a
+                href="https://www.tokyo-kawaraban.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:text-ink-muted"
+              >
+                東京かわらばん様
+              </a>
+            </p>
             <p className="text-ink-faint/80">
               DevOps × AI Agent Hackathon 提出作品 / データはデモ用のローカルシードを含みます。
             </p>
